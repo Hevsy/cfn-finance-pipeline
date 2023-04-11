@@ -1,6 +1,12 @@
 # CloudFormation Template for Continuous Delivery
 This AWS CloudFormation template is designed to build an AWS CodePipeline pipeline that enables a continuous delivery release process for AWS CloudFormation stacks. The pipeline uses a CloudFormation source artifact that is submitted to an Amazon S3 location, after which the pipeline will automatically create stacks and change sets.
 
+## Stages
+The pipeline includes three stages: S3Source, TestStage, and ProdStage. 
+* The first stage sources the template from the S3 bucket. 
+* The second stage creates a test stack, waits for approval, and deletes the stack if the test fails. 
+* The third stage creates a change set for the production stack, waits for approval, and executes the change set to update the stack
+
 ## Parameters
 The template uses the following parameters:
 
