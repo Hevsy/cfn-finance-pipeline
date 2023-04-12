@@ -36,5 +36,3 @@ To use this CloudFormation template, submit a CloudFormation source artifact to 
 
 Upon successful creation of the stack, the AWS CodePipeline pipeline will be set up for you, and you can begin using it to implement a continuous delivery release process for AWS CloudFormation stacks.
 
-## License
-This CloudFormation template is licensed under the Apache 2.0 License. See the LICENSE file for more information.
